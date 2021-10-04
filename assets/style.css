@@ -1,0 +1,60 @@
+header{ 
+    color:white;
+    text-align: center;
+    background-color: brown;
+    padding:5px;
+}
+
+main{
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    
+}
+img{
+    margin-top: 30px;
+    max-width:40%;
+}
+footer{
+    width:100%;
+    position:absolute;
+    bottom: 2%;
+    text-align: center;
+    color:black;
+    background-color: darkgray;
+}
+body{
+    background-color: lightgray;
+}
+
+h2{margin:0px}
+p{margin:3px}
+
+
+/* This us for campsite specific styling */
+#CampsitePage main{
+    margin-top: 0px;
+    width:100%;
+}
+
+#sitePic{
+    margin-top:0px; 
+    height:200px;
+    max-width: 100%;
+    width:100%;
+    background-size: fill; 
+}
+#weather{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+#weather p{
+    margin: 30px;
+    margin-bottom: 0px;
+    width:100%;
+    border:1px solid red;
+}
+#CampsitePage footer{
+    position: relative;
+}   
