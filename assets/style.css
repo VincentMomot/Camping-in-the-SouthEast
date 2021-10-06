@@ -6,19 +6,23 @@ header{
 }
 
 main{
-    margin-top: 50px;
+    margin-top: 30px;
     display: block;
     text-align: center;
     
 }
+input{
+    min-height: 3em; 
+    border-radius: 4px;   
+}
 img{
-    margin-top: 20px;
+    margin-top: 10px;
     max-width:40%;
 }
 footer{
     width:100%;
     height:13%;
-    position:absolute;
+    position:realtive;
     bottom: 0%;
     text-align: center;
     color:black;
@@ -56,10 +60,6 @@ p{margin:3px}
     width:100%;
     border:1px solid red;
 }
-#CampsitePage footer{
-    position: relative;
-}   
-
 
 
 /* Dropdown Button */
@@ -104,5 +104,7 @@ p{margin:3px}
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd}
   
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+#button{
+    min-width: 160px;
+    margin-bottom: 15px;
+}
