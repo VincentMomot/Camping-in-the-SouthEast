@@ -4,6 +4,14 @@ header{
     background-color: brown;
     padding:5px;
 }
+h1{font-size: 28px;}
+a{
+    color:white;
+    font-weight: bolder;
+}
+a:hover{
+    color:yellow;
+}
 
 main{
     margin-top: 30px;
@@ -13,7 +21,8 @@ main{
 }
 input{
     min-height: 3em; 
-    border-radius: 4px;   
+    border-radius: 4px; 
+    text-align:center;  
 }
 img{
     margin-top: 10px;
@@ -40,6 +49,14 @@ p{margin:3px}
 #CampsitePage main{
     margin-top: 0px;
     width:100%;
+}
+
+#CampsitePage a{
+    font-size: 28px;
+}
+
+#CampsitePage header{
+    padding:15px;
 }
 
 #sitePic{
