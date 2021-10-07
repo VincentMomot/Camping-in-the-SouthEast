@@ -4,7 +4,7 @@ button.addEventListener("click", show) //this is for the dropdown
 zip.addEventListener('keypress', enter) //this is the textbox
 
 if (localStorage.getItem("zipCode") != null) {
-    zip.placeholder=localStorage.getItem("zipCode");
+    zip.placeholder=localStorage.getItem("zipCode");    
 }
 
 //this shows and hides the dropdown menu

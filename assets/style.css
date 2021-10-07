@@ -1,3 +1,6 @@
+*{
+    font-family: sans-serif;
+}
 header{ 
     color:white;
     text-align: center;
@@ -46,17 +49,23 @@ p{margin:3px}
 
 
 /* This us for campsite specific styling */
+#forecast{
+    display: flex;
+}
 #CampsitePage main{
     margin-top: 0px;
     width:100%;
 }
 
 #CampsitePage a{
-    font-size: 28px;
+    font-size: 15px;
 }
 
 #CampsitePage header{
-    padding:15px;
+    padding:5px;
+}
+#CampsitePage h1{
+    margin:10px;
 }
 
 #sitePic{
@@ -72,11 +81,23 @@ p{margin:3px}
     margin-bottom: 20px;
 }
 #weather p{
-    margin: 30px;
+    margin: 15px;
     margin-bottom: 0px;
     width:100%;
-    border:1px solid red;
+    /* border:1px solid red; */
+    font-size: 40px;
+    margin-left: 0px;
 }
+
+#forecast{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    /* border: 1px solid blue; */
+    width:60%;
+}
+  
 
 
 /* Dropdown Button */
