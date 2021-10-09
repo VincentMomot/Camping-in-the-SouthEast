@@ -38,7 +38,13 @@ function localSite(event) {
 function enter(event) {
     if (event.keyCode == 13) { //enter button to search
         var zipCode=zip.value;
+        if(zipCode>500 && zipCode<99951){
         zip.style.backgroundColor="green";
         localStorage.setItem("zipCode",zipCode);
+        }
+        else{
+            zip.style.backgroundColor="red" ;
+            alert("Please enter a valid zipcode")
+        }
     }
 }
