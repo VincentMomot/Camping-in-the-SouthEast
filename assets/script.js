@@ -16,6 +16,29 @@
 // }
 // test()
 
+// This is the working API Key that lists all the other state parks and their hyperlinks in the footer of the website.
+const apiKey= "adYQVjEhRTZQz7BHfUcS42czwyzTgtOluElLZJlN"
+function test(stateCode){
+    const fetchurl="https://developer.nps.gov/api/v1/campgrounds?stateCode="+stateCode+"&limit=50&start=0&api_key="+apiKey;
+    fetch(fetchurl)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+       	let html = "<ul>";
+      	for (let park of data.data){
+        	html += `<li><a href="${park.url}">${park.name}</a></li>`;
+        }
+      	html += "</ul>";
+      	document.querySelector("footer").innerHTML = html;
+    });
+}
+const state = window.localStorage.getItem('LastParkSearch')
+test("al")
+
+
+
 
 const api = {
     //key: "e4ce42a714cb9c3a4f80a484e0b90750", //Todd's key
@@ -90,25 +113,7 @@ var parks = [{
     description: "Ridge upon ridge of forest straddles the border between North Carolina and Tennessee in Great Smoky Mountains National Park. World renowned for its diversity of plant and animal life, the beauty of its ancient mountains, and the quality of its remnants of Southern Appalachian mountain culture, this is America's most visited national park.",
 }]
 
-// This is the working API Key that lists all the other state parks and their hyperlinks in the footer of the website.
-const apiKey= "adYQVjEhRTZQz7BHfUcS42czwyzTgtOluElLZJlN"
-function test(){
-    const fetchurl="https://developer.nps.gov/api/v1/campgrounds?stateCode=al&limit=50&start=0&api_key="+apiKey;
-    fetch(fetchurl)
-    .then(function(response){
-        return response.json()
-    })
-    .then(function(data){
-        console.log(data)
-       	let html = "<ul>";
-      	for (let park of data.data){
-        	html += `<li><a href="${park.url}">${park.name}</a></li>`;
-        }
-      	html += "</ul>";
-      	document.querySelector("footer").innerHTML = html;
-    });
-}
-test()
+
 
 
 
