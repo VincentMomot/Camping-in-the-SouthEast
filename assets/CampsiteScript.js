@@ -6,6 +6,11 @@ const api = {
 }
 var zipCode = localStorage.getItem("zipCode")
 zip.textContent = "Zip Code entered: " + zipCode;
+
+state2load=localStorage.getItem("LastParkSearch");
+console.log(state2load);
+
+
 var parkCoordLon = [-84.386330];
 var parkCoordLat = [33.753746];
 var parkName = [];
