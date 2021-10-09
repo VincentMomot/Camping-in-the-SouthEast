@@ -44,7 +44,7 @@ function enter(event) {
         }
         else{
             zip.style.backgroundColor="red" ;
-            alert("Please enter a valid zipcode")
+            alert("Please enter a valid zipcode");
         }
     }
 }
