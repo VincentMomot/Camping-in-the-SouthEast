@@ -4,7 +4,7 @@ button.addEventListener("click", show) //this is for the dropdown
 zip.addEventListener('keypress', enter) //this is the textbox
 
 if (localStorage.getItem("zipCode") != null) {
-    zip.placeholder=localStorage.getItem("zipCode");    
+    zip.placeholder=localStorage.getItem("zipCode");
 }
 
 //this shows and hides the dropdown menu
@@ -17,7 +17,7 @@ function show() {
         showMe.style.display = "none";
         shw--;
     }
-    console.log(shw)
+   
 }
 
 if (localStorage.getItem("LastParkSearch") != null) {
@@ -44,7 +44,7 @@ function enter(event) {
         }
         else{
             zip.style.backgroundColor="red" ;
-            alert("Please enter a valid zipcode");
+            alert("Please enter a valid zipcode")
         }
     }
-}
+} 

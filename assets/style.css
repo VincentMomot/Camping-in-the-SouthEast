@@ -29,7 +29,7 @@ input{
 }
 img{
     margin-top: 10px;
-    width: 100%;
+    width: 40%;
 }
 footer{
     width:100%;
@@ -49,9 +49,6 @@ p{margin:3px}
 
 
 /* This us for campsite specific styling */
-#forecast{
-    display: flex;
-}
 #CampsitePage main{
     margin-top: 0px;
     width:100%;
@@ -101,6 +98,11 @@ p{margin:3px}
    margin-left: 20px;
    font-size: 20px;
 }
+
+#forecast p{
+    font-size: 150%;
+}
+
   /* weather */
 #currentDay,#one,#two,#three,#four,#five,#six{
     border: 2px solid black;
