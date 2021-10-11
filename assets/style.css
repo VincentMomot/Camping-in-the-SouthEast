@@ -34,7 +34,7 @@ img{
 }
 #CampsitePage img {
     margin-top: 10px;
-    width: 100%;
+    width: 40%;
 }
 footer{
     width:100%;
@@ -54,9 +54,6 @@ p{margin:3px}
 
 
 /* This us for campsite specific styling */
-#forecast{
-    display: flex;
-}
 #CampsitePage main{
     margin-top: 0px;
     width:100%;
@@ -106,6 +103,11 @@ p{margin:3px}
    margin-left: 20px;
    font-size: 20px;
 }
+
+#forecast p{
+    font-size: 150%;
+}
+
   /* weather */
   #weather-header{
     margin-top:90px
@@ -184,3 +186,50 @@ p{margin:3px}
         }
     
       }
+
+/* Map Api Styling */
+
+.jumbotron{ 
+    background-color: transparent;
+    font-family: "poppins", sans-serif;
+}
+Styling the jumbotron to display on page */
+
+.jumbotron{
+    height: 100%;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 10px;
+}
+
+.jumbotron h1{
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-align: center;
+}
+
+.jumbotron p {
+    font-size: 1em;
+}
+
+.form-group{
+    text-align: center;
+}
+.to-group{
+    text-align: center;
+}
+button{
+    width: 10%;
+    height: 30px;
+}
+
+#googleMap{
+    height: 400px;
+    width: 200px;
+}
