@@ -24,14 +24,19 @@ input{
     border-radius: 4px; 
     text-align:center;  
 }
+
 img{
+    margin-top: 30px;
+    max-width:40%;
+}
+#CampsitePage img {
     margin-top: 10px;
     width: 40%;
 }
 footer{
     width:100%;
     height:13%;
-    position:realtive;
+    position:static;
     bottom: 0%;
     text-align: center;
     color:black;
@@ -81,7 +86,7 @@ p{margin:3px}
     margin-bottom: 0px;
     width:100%;
     /* border:1px solid red; */
-    font-size: 40px;
+    font-size: 38px;
     margin-left: 0px;
 }
 
@@ -101,6 +106,9 @@ p{margin:3px}
 }
 
   /* weather */
+  #weather-header{
+    margin-top:90px
+  }
 #currentDay,#one,#two,#three,#four,#five,#six{
     border: 2px solid black;
     border-radius: 5px;
@@ -164,7 +172,9 @@ p{margin:3px}
     }
     #weather {
         display:block;
-    
+    }
+    #weather-header{
+        margin-top: 0px;
     }
       }
       @media (max-width:750px){
