@@ -1,6 +1,3 @@
-*{
-    font-family: sans-serif;
-}
 header{ 
     color:white;
     text-align: center;
@@ -105,7 +102,7 @@ p{margin:3px}
 }
 
 #forecast p{
-    font-size: 150%;
+    font-size: 190%;
 }
 
   /* weather */
@@ -117,7 +114,7 @@ p{margin:3px}
     border-radius: 5px;
     padding: 2px;
     background-color: lightgrey;
-    width: 100px;
+    width: 110px;
 }
 
 
@@ -141,6 +138,7 @@ p{margin:3px}
     position: relative;
     display: inline-block;
   }
+
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
@@ -181,7 +179,7 @@ p{margin:3px}
       }
       @media (max-width:750px){
         #forecast h4,#forecast p{
-       font-size: 60%;
+       font-size: 75%;
     
         }
     
