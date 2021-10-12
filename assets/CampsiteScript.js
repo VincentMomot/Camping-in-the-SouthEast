@@ -28,7 +28,7 @@ var parks = [{
     parkName: "Blood Mountain",
     parkCoordLon: 34.7398,
     parkCoordLat: -83.9369,
-    img: "ga.jpeg",
+    img: "ga.png",
     stImg: "ga.jpg",
     description: "Only an hour and half drive from Atlanta, Blood Mountain is the highest point of the Applachain Trail in Georgia. With an overlook of Blairsville and nearby parking, it is a must visit for anybody in Atlanta or vacationing in Atlanta."
 },
@@ -102,7 +102,7 @@ var parkCoordLat = state.parkCoordLon;
 InsertNameHere.textContent = state.parkName;
 sitePic.src = "parkImgs/" + state.img;
 stImg.src = "state/" + state.stImg;
-descirption.textContent = state.description;
+description.textContent = state.description;
 const el = [d1, d2, d3, d4, d5, d6, i1, i2, i3, i4, i5, i6, t1, t2, t3, t4, t5, t6];
 var icon;
 var tempF;
