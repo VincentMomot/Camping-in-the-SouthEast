@@ -6,13 +6,14 @@ const api = {
 
     base: "https://api.openweathermap.org/data/2.5/" //used for onecall and forcast
 }
-var zipCode = localStorage.getItem("zipCode")
-zip.textContent = "Zip Code entered: " + zipCode;
+// var zipCode = localStorage.getItem("zipCode")
+// zip.textContent = "Zip Code entered: " + zipCode;
 var parks = [{
     parkName: "Cheaha State Park",
     parkCoordLon: 33.4701,
     parkCoordLat: -85.8133,
     img: "al.jpeg",
+    stImg: "al.png",
     description: "Located in Northern Alabama in the foothills of the Appalachain Mountain. Cheaha State Park is Alabama’s oldest continuously operating state park. Facilities include lodgings, a restaurant, campsites, and hiking trails.",
 },
 {
@@ -20,6 +21,7 @@ var parks = [{
     parkCoordLon: 33.4701,
     parkCoordLat: -81.2744,
     img: "fl.jpg",
+    stImg: "fl.jpg",
     description: "The hidden jewel of Florida, Bahai Honda State park offers something for everybody. Located on one of the Florida Keyes, the island is virtually uninhabited, being home to the 524-acre (212-hectare) Bahia Honda State Park.[1][2] Founded in 1961, the park occupies most of the island. The channel at the island’s west end is one of the deepest natural channels in the Florida Keys."
 },
 {
@@ -27,6 +29,7 @@ var parks = [{
     parkCoordLon: 34.7398,
     parkCoordLat: -83.9369,
     img: "ga.jpeg",
+    stImg: "ga.jpg",
     description: "Only an hour and half drive from Atlanta, Blood Mountain is the highest point of the Applachain Trail in Georgia. With an overlook of Blairsville and nearby parking, it is a must visit for anybody in Atlanta or vacationing in Atlanta."
 },
 {
@@ -34,6 +37,7 @@ var parks = [{
     parkCoordLon: 34.6047,
     parkCoordLat: -88.1909,
     img: "ms.jpeg",
+    stImg: "ms.png",
     description: "Tishomingo State Park is a public recreation area located in the foothills of the Appalachian Mountains in Tishomingo County, some 45 miles northeast of Tupelo, Mississippi. The major feature of the park is Bear Creek Canyon and its generous sandstone outcroppings.",
 },
 {
@@ -41,6 +45,7 @@ var parks = [{
     parkCoordLon: 35.2847,
     parkCoordLat: -82.7270,
     img: "nc.jpg",
+    stImg: "nc.jpg",
     description: "The Pisgah National Forest is a land of mile-high peaks, cascading waterfalls, and heavily forested slopes. Comprised of over 500,000 acres, the Pisgah is primarily a hardwood forest with whitewater rivers, waterfalls and hundreds of miles of trails. This national forest is home of the first tract of land purchased under the Weeks Act of 1911, which led to the creation of the national forests in the eastern United States. It is also home of the first school of forestry in the United States, now preserved at the Cradle of Forestry in America historic site, and boasts two of the first designated wilderness areas in the east."
 },
 {
@@ -48,6 +53,7 @@ var parks = [{
     parkCoordLon: 33.6512,
     parkCoordLat: -78.9306,
     img: "sc.jpg",
+    stImg: "sc.png",
     description: "Myrtle Beach State Park is a 312 acre state park located in Myrtle Beach, South Carolina on land donated by Myrtle Beach Farms in 1934. The park was the first South Carolina State Park to open in 1936. A nice respite from the more crowded Mrytle Beach and its main drag, Myrtle Beach State Park was developed by the Civilian Conservation Corps, a New Deal Program created by President Franklin D. Roosevelt.",
 },
 {
@@ -55,6 +61,7 @@ var parks = [{
     parkCoordLon: 35.6532,
     parkCoordLat: -83.5070,
     img: "tn.jpeg",
+    stImg: "tn.jpg",
     description: "Ridge upon ridge of forest straddles the border between North Carolina and Tennessee in Great Smoky Mountains National Park. World renowned for its diversity of plant and animal life, the beauty of its ancient mountains, and the quality of its remnants of Southern Appalachian mountain culture, this is America’s most visited national park.",
 }]
 state2load = localStorage.getItem("LastParkSearch");
@@ -89,13 +96,12 @@ else if (state2load.includes('Tennessee')) {
     var abbr = "TN";
 }
 
- var parkCoordLon = state.parkCoordLat;
- var parkCoordLat = state.parkCoordLon;
- 
- InsertNameHere.textContent=state.parkName;
-// var stateMap = ;
-// var parkImg = ;
-sitePic.src="parkImgs/"+state.img;
+var parkCoordLon = state.parkCoordLat;
+var parkCoordLat = state.parkCoordLon;
+
+InsertNameHere.textContent = state.parkName;
+sitePic.src = "parkImgs/" + state.img;
+stImg.src = "state/" + state.stImg;
 descirption.textContent = state.description;
 const el = [d1, d2, d3, d4, d5, d6, i1, i2, i3, i4, i5, i6, t1, t2, t3, t4, t5, t6];
 var icon;
@@ -161,32 +167,14 @@ function weatherIcon(weather) {
 
 var tempF;
 function tempConvert(temperature) {
-    tempF = Math.round((temperature - 273.15) * 9 / 5 + 32);   
+    tempF = Math.round((temperature - 273.15) * 9 / 5 + 32);
 }
 
-
-
-
-// First attempt at putting together the list
-// var zipCode=localStorage.getItem("zipCode")
-// zip.textContent="Zip Code entered: " + zipCode;
-// var parkCoordLon=[33.4701,24.6598,34.7398,34.6047, 35.2847,33.6512,35.6532]
-// var parkCoordLat=[-85.8133,-81.2744,-83.9369,-88.1909,-82.7270,-78.9306,-83.5070];
-// var parkName=["Cheaha State Park", "Bahia Honda State Park", "Blood Mountain", "Tishomingo State Park", "Pigsah National Forest","Mrytle Beach State Park","Smoky Moutain National Park" ];
-// var stateMap=[Al,Fl, GA, MS, NC, SC, TN];
-// var parkImg=[<img src="assets/al_cheaha_state_park_pic.jpeg"></img>; <img scr="assets/fl_bahai_honda_state_park.jpg" >; <img src="assets/ga_blood_mountain_pic.jpeg">;<img scr="assets/ms_tishomingo_state_park"> <img scr="assets/nc_pigsah_national_forest_pic.jpg"></img>;img src="sc_myrtle_beach_state_park.jpg"></img>;<img src="tn_great_smoky_moutain_national_pic.jpeg">]
-// var parkDescription = ["Located in Northern Alabama in the foothills of the Appalachain Mountain. Cheaha State Park is Alabama’s oldest continuously operating state park. Facilities include lodgings, a restaurant, campsites, and hiking trails.",
-// "The hidden jewel of Florida, Bahai Honda State park offers something for everybody. Located on one of the Florida Keyes, the island is virtually uninhabited, being home to the 524-acre (212-hectare) Bahia Honda State Park.[1][2] Founded in 1961, the park occupies most of the island. The channel at the island’s west end is one of the deepest natural channels in the Florida Keys."
-// "Only an hour and half drive from Atlanta, Blood Mountain is the highest point of the Applachain Trail in Georgia.  With an overlook of Blairsville and nearby parking, it is a must visit for anybody in Atlanta or vacationing in Atlanta."];
-// "Tishomingo State Park is a public recreation area located in the foothills of the Appalachian Mountains in Tishomingo County, some 45 miles northeast of Tupelo, Mississippi. The major feature of the park is Bear Creek Canyon and its generous sandstone outcroppings."
-// "The Pisgah National Forest is a land of mile-high peaks, cascading waterfalls, and heavily forested slopes. Comprised of over 500,000 acres, the Pisgah is primarily a hardwood forest with whitewater rivers, waterfalls and hundreds of miles of trails. This national forest is home of the first tract of land purchased under the Weeks Act of 1911, which led to the creation of the national forests in the eastern United States. It is also home of the first school of forestry in the United States, now preserved at the Cradle of Forestry in America historic site, and boasts two of the first designated wilderness areas in the east."
-// "Myrtle Beach State Park is a 312 acre state park located in Myrtle Beach, South Carolina on land donated by Myrtle Beach Farms in 1934. The park was the first South Carolina State Park to open in 1936. A nice respite from the more crowded Myrtle Beach and its main drag, Myrtle Beach State Park was developed by the Civilian Conservation Corps, a New Deal Program created by President Franklin D. Roosevelt."
-// "Ridge upon ridge of forest straddles the border between North Carolina and Tennessee in Great Smoky Mountains National Park. World renowned for its diversity of plant and animal life, the beauty of its ancient mountains, and the quality of its remnants of Southern Appalachian mountain culture, this is America’s most visited national park."
 
 // This is the working API Key that lists all the other state parks and their hyperlinks in the footer of the website.
 const apiKey = "adYQVjEhRTZQz7BHfUcS42czwyzTgtOluElLZJlN"
 function test() {
-    const fetchurl = "https://developer.nps.gov/api/v1/campgrounds?stateCode=al&limit=50&start=0&api_key=" + apiKey;
+    const fetchurl = "https://developer.nps.gov/api/v1/campgrounds?stateCode=" + abbr + "&al&limit=10&start=0&api_key=" + apiKey;
     fetch(fetchurl)
         .then(function (response) {
             return response.json()
@@ -195,13 +183,15 @@ function test() {
             //console.log(data)
             let html = "<ul>";
             for (let park of data.data) {
-                html += `<li><a href="${park.url}">${park.name}</a></li>`;
+                if (park.url != "") {
+                    //console.log(park.url)
+                    html += `<li><a href="${park.url}">${park.name}</a></li>`;
+                }
             }
             html += "</ul>";
             document.querySelector("footer").innerHTML = html;
         });
 }
-test()
-// fetch(`${api.base}onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${api.key}`).then(function (onecallweather) {
-//     return onecallweather.json()});
-//     console.log(data)
+
+test();
+
