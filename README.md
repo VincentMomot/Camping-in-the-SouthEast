@@ -20,3 +20,4 @@ Look for camping near you at [our camping website!](https://vincentmomot.github.
 
 Screenshots of the site:
 ![This is an image of my main page](assets/ss.png)
+![Image of a sample page](assets/ss2.png)
